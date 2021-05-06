@@ -330,7 +330,7 @@ nonceとは実行の順番を管理する番号のことです。アカウント
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/23175/b7af8a2c-99c8-46c2-6d5f-a2d419c54a9c.png)
 
 
-#monorepo化。contractsとfrontendを統合する。
+# monorepo化。contractsとfrontendを統合する。
 
 packagesにあるcontractsとfrontendを統合します。
 simpleNFTフォルダー(root folder)に移動して作業をします。
