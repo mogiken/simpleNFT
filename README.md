@@ -1,5 +1,7 @@
 # 概要
-シンプルなNFTをデプロイするサンプルプログラムの作成手順と解説です。ksuharaさんのページを参考にさせていただきました。
+シンプルなNFTをデプロイするサンプルプログラムの作成手順と解説です。NFTをUIからデプロイする開発環境をフルスクラッチから作るためのハンズオンセミナーを開催するような構成にしています。
+
+ksuharaさんのページを参考にさせていただきました。
 参考：
 
 https://qiita.com/ksuhara/items/55296e5098bc27061d13
@@ -16,7 +18,7 @@ https://qiita.com/ksuhara/items/55296e5098bc27061d13
 |![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/23175/fc7687f9-ff9c-67c5-1042-0658c4cee74a.png)|
 |:--|
 
-・コードは下記に置いています。
+・結果のコードは下記に置いています。
 
 https://github.com/mogiken/simpleNFT
 
