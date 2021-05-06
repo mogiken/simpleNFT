@@ -1,19 +1,17 @@
-#simpleNFT
-シンプルなNFTをデプロイするサンプルプログラムの作成手順と解説
-#概要
+# 概要
 シンプルなNFTをデプロイするサンプルプログラムの作成手順と解説です。ksuharaさんのページを参考にさせていただきました。
 参考：
 
 https://qiita.com/ksuhara/items/55296e5098bc27061d13
 
 基本部分は同じです。内容をシンプルにし、初心者用がよくはまるパターンの補足、craco,Reactの導入とUIでのNFTのDeploy,Mint部分を追記しています。testなどうまく動いていない部分も修正しています。
-#ゴール
-・NFTの開発環境が構築できる
-・NFTのtest環境が構築できる
-・NFTのReactを使ったUI環境が構築できる。
-・NFTのdeploy,mintをMetamaskを通じてUIから実行するプログラムが理解できる。
-・テストネットrinkebyの検証方法が理解できる。
-・下記のようなNFTを操作するUIが作成できます。
+# ゴール
+* NFTの開発環境が構築できる
+* NFTのtest環境が構築できる
+* NFTのReactを使ったUI環境が構築できる。
+* NFTのdeploy,mintをMetamaskを通じてUIから実行するプログラムが理解できる。
+* テストネットrinkebyの検証方法が理解できる。
+* 下記のようなNFTを操作するUIが作成できます。
 
 |![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/23175/fc7687f9-ff9c-67c5-1042-0658c4cee74a.png)|
 |:--|
@@ -23,7 +21,7 @@ https://qiita.com/ksuhara/items/55296e5098bc27061d13
 https://github.com/mogiken/simpleNFT
 
 
-#前提(事前準備)
+# 前提(事前準備)
 Ubuntu20.04で動作確認してます。
 Node.jsがインストール済み。
 Ubuntuで開発ができる。
@@ -38,7 +36,7 @@ twitterで送金してほしいアドレスをつぶやいてURLを貼り付け�
 私は上記環境を、DockerのUnintu20.04 + sshで作成し、VisualStudioCode + extentionのsftpで接続してプログラム開発しました。
 MacやWindowsのwsl2でも動くと思います。
 
-#プロジェクト作成
+# プロジェクト作成
 
 プロジェクトフォルダーを作成
 
@@ -55,9 +53,10 @@ mkdir frontend
 mkdir contracts
 ```
 以下のようなフォルダー構成になればOKです。
+
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/23175/a5b4751d-9500-cefc-ed91-db1e7e6b5f68.png)
 
-#contractsフォルダーでの環境構築
+# contractsフォルダーでの環境構築
 
 contractsに移動してプロジェクトを作成します。
 
@@ -170,7 +169,7 @@ main()
 このときに、``simpleNFT\packages\contracts\artifacts\contracts\NFT.sol\NFT.json``が作成されます。
 **このファイルにはabi,bytecodeなどがあり、frontendでdeployするときに使うので、NFT.solを修正したらかならず``yarn deploy``実行してください。**
 
-#frontendフォルダーでの環境構築
+# frontendフォルダーでの環境構築
 
 Reactプロジェクトを作成します
 
@@ -381,7 +380,7 @@ yarn dev
 次に、http://localhost:3000/ にブラウザから接続して確認します。
 
 
-#Staging環境追加
+# Staging環境追加
 
 テストネットrinkebyの環境をStaging環境として使います。その設定を行います。
 
@@ -408,12 +407,12 @@ deployするとconsoleにetherscanのリンクが表示されるので、success
 |![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/23175/c6c35a1b-1212-12c1-b862-c5a6d528afa2.png)|
 |:--|
 
-#まとめ
+# まとめ
 シンプルなNFTをDeployするための環境を構築構築をしました。DeployからmintまでUIで処理するコードも記載しています。かなり初心者でもわかりやすく書いたつもりです。これをベースにして、UIを含めたNFTサイトの開発は進められると思います。
 
 今後は、
-・希望があればデジハリなどでハンズオン形式でセミナーも開きたいですね。
-・NFTの処理自体は、シンプルなままなのでOpenseaにも対応した少しカスタムしたコントラクトの開発も追記する予定です。
-・バックエンドに、Firebaseを追加して、DeployしたNFTの管理ができるようなサンプルコードも追記する予定です。
+* NFTの処理自体は、シンプルなままなのでOpenseaにも対応した少しカスタムしたコントラクトの開発も追記する予定です。
+* バックエンドに、Firebaseを追加して、DeployしたNFTの管理ができるようなサンプルコードも追記する予定です。
+* 希望があればデジハリなどでハンズオン形式でセミナーも開きたいですね。
 
 
